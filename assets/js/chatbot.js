@@ -1,16 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
   const chatbotIcon = document.getElementById("chatbot-icon");
   const chatbotContainer = document.getElementById("chatbot-container");
-  const chatbotHeader = document.getElementById("chatbot-header");
   const chatbotClose = document.getElementById("chatbot-close");
   const chatbotMessages = document.getElementById("chatbot-messages");
   const userInput = document.getElementById("user-input");
   const sendButton = document.getElementById("send-button");
 
-  chatbotIcon.addEventListener("click", function () {
-    chatbotContainer.style.display = "block";
+  chatbotIcon.addEventListener("mousedown", function (event) {
+    event.preventDefault();
+    setTimeout(function () {
+      chatbotContainer.style.display = "block";
+    }, 200); // Add a small delay (200 milliseconds) before displaying the container
   });
-
   chatbotClose.addEventListener("click", function () {
     chatbotContainer.style.display = "none";
   });
