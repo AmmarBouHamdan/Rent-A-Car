@@ -12,7 +12,10 @@
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <title>Rent-A-Car</title>
 
     <!-- Bootstrap core CSS -->
@@ -22,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/chatbot.css" />
   </head>
 
   <body>
@@ -34,7 +38,33 @@
       </div>
     </div>
     <!-- ***** Preloader End ***** -->
+    <!-- Chatbot Start -->
+    <div id="chatbot-icon">
+      <i class="fas fa-comment"></i>
+    </div>
 
+    <div id="chatbot-container" class="closed">
+      <div id="chatbot-header">
+        <h3>WheelsMate 🚗</h3>
+        <button id="chatbot-close">X</button>
+      </div>
+      <div id="chatbot-body">
+        <h6 id="chatbot-welcome">
+          Welcome! I'm your friendly AI chatbot ready to assist you with all
+          your rental car needs. Just ask away!
+        </h6>
+        <div id="chatbot-messages"></div>
+        <div id="chatbot-input">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Type your message..."
+          />
+          <button id="send-button">Send</button>
+        </div>
+      </div>
+    </div>
+    <!-- Chatbot End -->
     <!-- Header -->
     <div class="sub-header">
       <div class="container">
@@ -586,6 +616,7 @@
     <script src="assets/js/owl.js"></script>
     <script src="assets/js/slick.js"></script>
     <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/chatbot.js"></script>
 
     <script language="text/Javascript">
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
